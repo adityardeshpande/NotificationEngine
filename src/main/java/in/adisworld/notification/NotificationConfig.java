@@ -10,6 +10,7 @@ public class NotificationConfig
 {
 
 	private Properties prop = null ; 
+
 	private static ReentrantLock lock = new ReentrantLock() ;
 	
 	private static NotificationConfig singleton = null ;
@@ -36,6 +37,7 @@ public class NotificationConfig
 		}
 	}
 
+	
 	public static NotificationConfig getInstance(String configFileWithPath) throws FileNotFoundException
 	{
 		lock.lock() ;
@@ -48,5 +50,10 @@ public class NotificationConfig
 		lock.unlock() ;
 
 		return singleton ;
+	}
+
+	private String getProperty (String key)
+	{
+		return singleton.getProperty(key) ;
 	}
 }
