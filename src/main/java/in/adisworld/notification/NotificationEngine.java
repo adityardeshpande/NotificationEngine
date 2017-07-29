@@ -1,7 +1,10 @@
 package in.adisworld.notification ;
 
-public class NotificationEngine {
-	public static void Main(){
+public class NotificationEngine 
+{
+	
+	public static void Main(String[] args)
+	{
 
 		/* Read Configuration */
 
